@@ -1,0 +1,1 @@
+/usr/bin/c++  -g  -rdynamic CMakeFiles/memoryPoolTest.dir/main.cpp.o  -o ../bin/memoryPoolTest 

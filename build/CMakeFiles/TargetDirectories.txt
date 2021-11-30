@@ -1,0 +1,3 @@
+/home/tian/workstation/test_try/SkipList/build/CMakeFiles/rebuild_cache.dir
+/home/tian/workstation/test_try/SkipList/build/CMakeFiles/edit_cache.dir
+/home/tian/workstation/test_try/SkipList/build/CMakeFiles/SkipListDB.dir

@@ -1,0 +1,3 @@
+/home/tian/workstation/test_try/Mytest/MemoryPool/build/CMakeFiles/rebuild_cache.dir
+/home/tian/workstation/test_try/Mytest/MemoryPool/build/CMakeFiles/edit_cache.dir
+/home/tian/workstation/test_try/Mytest/MemoryPool/build/CMakeFiles/memoryPoolTest.dir
