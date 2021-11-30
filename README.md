@@ -1,7 +1,7 @@
 ### Simple_SkipListDB
 
 #### 前言
-看起来很简单的一个跳表项目，但是可以借此来谈论Redis、LevelDB，回忆一下：
+看起来很简单的一个跳表项目，但是可以借此来谈论一下Redis、LevelDB等实现，回忆一下：
 - 有序集合zset底层是依赖跳表实现的，来看一下Redis源码是怎么定义的：
 ```c++
 #define ZSKIPLIST_MAXLEVEL 32
