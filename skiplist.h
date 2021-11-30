@@ -289,10 +289,10 @@ bool SkipList<K, V>::is_valid_string(const std::string& str) {
 
 // Delete element from skip list 
 /*
-                           +------------+
-                           |  Delete 50 |
-                           +------------+
-level 4     +-->1+                                                              100
+                                    +------------+
+                                    |  Delete 50 |
+                                    +------------+
+level 4     +-->1+                                                                100
                  |
                  |
 level 3         1+---------->10+======================>(50)+============>70       100
