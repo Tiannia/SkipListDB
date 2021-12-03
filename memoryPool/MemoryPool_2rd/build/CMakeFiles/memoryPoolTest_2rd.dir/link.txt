@@ -1,0 +1,1 @@
+/usr/bin/cc -g  -rdynamic CMakeFiles/memoryPoolTest_2rd.dir/main.c.o CMakeFiles/memoryPoolTest_2rd.dir/mmpool.c.o  -o ../bin/memoryPoolTest_2rd  -lpthread 
