@@ -1,1 +1,0 @@
-/usr/bin/c++  -g  -rdynamic CMakeFiles/SkipListDB.dir/main.cpp.o  -o ../bin/SkipListDB  -lpthread 

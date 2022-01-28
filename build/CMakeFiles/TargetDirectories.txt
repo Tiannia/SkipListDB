@@ -1,3 +1,0 @@
-/home/tian/wk/Projects/SkipListDB/build/CMakeFiles/rebuild_cache.dir
-/home/tian/wk/Projects/SkipListDB/build/CMakeFiles/edit_cache.dir
-/home/tian/wk/Projects/SkipListDB/build/CMakeFiles/SkipListDB.dir
