@@ -1,12 +1,15 @@
 #include <iostream>
 #include "skiplist.h"
 #define FILE_PATH "../store/dumpFile"
+#define TEST
+
 
 int main() {
 
+#ifdef TEST
     //origin key is string, here is int for test.
     SkipList<int, std::string> skipList(6);
-	skipList.insert_element(1, "kejiang"); //score, element (key, value)
+	skipList.insert_element(20, "kejiang"); //score, element (key, value)
 	skipList.insert_element(7, "erke"); 
 	skipList.insert_element(3, "tian"); 
 	skipList.insert_element(100, "zerotrac"); 
@@ -41,4 +44,7 @@ int main() {
     skipList_new.load_file();
 
     skipList_new.display_list();
+#endif
+
+    return 0;
 }

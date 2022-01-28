@@ -6,23 +6,23 @@
 
 #IncludeRegexTransform: 
 
-/home/tian/workstation/test_try/SkipList/main.cpp
+/home/tian/wk/Projects/SkipListDB/main.cpp
 iostream
 -
 skiplist.h
-/home/tian/workstation/test_try/SkipList/skiplist.h
+/home/tian/wk/Projects/SkipListDB/skiplist.h
 
-/home/tian/workstation/test_try/SkipList/skiplist.h
-iostream
+/home/tian/wk/Projects/SkipListDB/skiplist.h
+cmath
 -
 cstdlib
 -
-cmath
--
 cstring
 -
-mutex
--
 fstream
+-
+iostream
+-
+mutex
 -
 

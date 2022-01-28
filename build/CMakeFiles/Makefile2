@@ -44,10 +44,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/tian/workstation/test_try/SkipList
+CMAKE_SOURCE_DIR = /home/tian/wk/Projects/SkipListDB
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/tian/workstation/test_try/SkipList/build
+CMAKE_BINARY_DIR = /home/tian/wk/Projects/SkipListDB/build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -74,14 +74,14 @@ clean: CMakeFiles/SkipListDB.dir/clean
 CMakeFiles/SkipListDB.dir/all:
 	$(MAKE) -f CMakeFiles/SkipListDB.dir/build.make CMakeFiles/SkipListDB.dir/depend
 	$(MAKE) -f CMakeFiles/SkipListDB.dir/build.make CMakeFiles/SkipListDB.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tian/workstation/test_try/SkipList/build/CMakeFiles --progress-num=1,2 "Built target SkipListDB"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tian/wk/Projects/SkipListDB/build/CMakeFiles --progress-num=1,2 "Built target SkipListDB"
 .PHONY : CMakeFiles/SkipListDB.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/SkipListDB.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tian/workstation/test_try/SkipList/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tian/wk/Projects/SkipListDB/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/SkipListDB.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tian/workstation/test_try/SkipList/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tian/wk/Projects/SkipListDB/build/CMakeFiles 0
 .PHONY : CMakeFiles/SkipListDB.dir/rule
 
 # Convenience name for target.
