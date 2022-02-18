@@ -220,7 +220,6 @@ void SkipList<K, V>::display_list() {
 template <typename K, typename V>
 void SkipList<K, V>::dump_file() {
   {
-    const std::lock_guard<std::mutex> lock(mtx);
     std::cout << "dump_file-----------------" << std::endl;
     _file_writer.open(STORE_FILE);
     Node<K, V>* node = this->_header->forward[0];
