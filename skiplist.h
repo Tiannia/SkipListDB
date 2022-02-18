@@ -240,7 +240,6 @@ void SkipList<K, V>::dump_file() {
 template <typename K, typename V>
 void SkipList<K, V>::load_file() {
   {
-    const std::lock_guard<std::mutex> lock(mtx);
     std::cout << "load_file-----------------" << std::endl;
     _file_reader.open(STORE_FILE);
     std::string line;
