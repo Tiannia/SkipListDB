@@ -6,14 +6,14 @@
 #include <time.h>
 #define SET
 #define GET
-#define NUM_THREADS 2
+#define NUM_THREADS 4
 #define TEST_COUNT 100000
 SkipList<int, std::string> skipList(18);
 
 int main() {
   srand(time(NULL));
-  // std::cout << "Cpu core num:" << std::thread::hardware_concurrency()
-  //          << std::endl;
+  std::cout << "Cpu core num:" << std::thread::hardware_concurrency()
+           << std::endl;
 
 #ifdef SET
   {
@@ -41,6 +41,7 @@ int main() {
     auto finish = std::chrono::high_resolution_clock::now();
     std::chrono::duration<double> elapsed = finish - start;
     std::cout << "insert elapsed:" << elapsed.count() << std::endl;
+    //std::cout << "count for test:" << count_for_test << std::endl;
   }
 #endif
 

@@ -9,6 +9,7 @@
 
 std::mutex mtx;  // mutex for critical section
 std::string delimiter = ":";
+int count_for_test = 0;
 
 // Class template to implement node
 template <typename K, typename V>
@@ -158,6 +159,7 @@ bool SkipList<K, V>::insert_element(const K key, const V value) {
     }
     update[i] = current;
   }
+  // count_for_test++;
 
   // reached level 0 and forward pointer to right node, which is desired to
   // insert key.
@@ -362,7 +364,6 @@ level 0         1    4   9 10         30   40    50+-->60      70       100
 */
 template <typename K, typename V>
 bool SkipList<K, V>::search_element(K key) {
-  std::cout << "search_element-----------------" << std::endl;
   Node<K, V>* current = _header;
 
   // start from highest level of skip list
