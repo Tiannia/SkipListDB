@@ -47,11 +47,10 @@ NODE_TYPE::Node(const K k, const V v, int level)
   this->value = v;
   this->node_level = level;
 
-  // level + 1, because array index is from 0 - level
-  this->forward = new NODE_TYPE *[level + 1];
+  this->forward = new NODE_TYPE *[level];
 
   // Fill forward array with 0(NULL)
-  memset(this->forward, 0, sizeof(NODE_TYPE *) * (level + 1));
+  memset(this->forward, 0, sizeof(NODE_TYPE *) * level);
 };
 
 template <typename K, typename V>
@@ -161,8 +160,8 @@ bool SKIPLIST_TYPE::insert_element(const K key, const V value)
   // create update array and initialize it
   // update is array which put node that the node->forward[i] should be operated
   // later
-  NODE_TYPE *update[_max_level + 1];
-  memset(update, 0, sizeof(NODE_TYPE *) * (_max_level + 1));
+  NODE_TYPE *update[_max_level];
+  memset(update, 0, sizeof(NODE_TYPE *) * _max_level);
 
   // start form highest level of skip list
   for (int i = _skip_list_level; i >= 0; i--)
@@ -253,7 +252,6 @@ void SKIPLIST_TYPE::dump_file()
     while (node != NULL)
     {
       _file_writer << node->get_key() << ":" << node->get_value() << "\n";
-      std::cout << node->get_key() << ":" << node->get_value() << ";\n";
       node = node->forward[0];
     }
 
@@ -280,7 +278,6 @@ void SKIPLIST_TYPE::load_file()
         continue;
       }
       insert_element(*key, *value);
-      std::cout << "key:" << *key << "value:" << *value << std::endl;
     }
     delete key;
     delete value;
@@ -346,8 +343,8 @@ void SKIPLIST_TYPE::delete_element(K key)
 {
   const std::lock_guard<std::mutex> lock(mtx);
   NODE_TYPE *current = this->_header;
-  NODE_TYPE *update[_max_level + 1];
-  memset(update, 0, sizeof(NODE_TYPE *) * (_max_level + 1));
+  NODE_TYPE *update[_max_level];
+  memset(update, 0, sizeof(NODE_TYPE *) * _max_level);
 
   // start from highest level of skip list
   for (int i = _skip_list_level; i >= 0; i--)
@@ -479,7 +476,7 @@ int SKIPLIST_TYPE::get_random_level()
   {
     k++;
   }
-  k = (k < _max_level) ? k : _max_level;
+  k = (k < _max_level) ? k : _max_level - 1;
   return k;
 };
 // vim: et tw=100 ts=4 sw=4 cc=120
